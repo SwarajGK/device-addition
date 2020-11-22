@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Device Addition</title>
+
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/bsdat_main.css">
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/base.css">
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/smart_wizard.min.css">
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/overhang.min.css" />
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/smart_wizard_theme_arrows.min.css">
+  <link rel="stylesheet" type="text/css" href="./resources/public/css/fonts.css" />
+</head>
+
+<body>
+  <div id="main_wrapper">
+    <div id="smartwizard">
+      <ul>
+        <li><a href="#step-1">Device information<br /><small>Description for device</small></a></li>
+        <li><a href="#step-2">Step 2<br /><small>Set the device position and generate code</small></a></li>
+        <li><a href="#step-3">Step 3<br /><small>Write manual code to rails app</small></a></li>
+        <li><a href="#step-4">Step 4<br /><small>Write generated code to files</small></a></li>
+      </ul>
+      <div>
+        <div id="step-1" class="">
+          <div id="step_1_device_form">
+            <div class="browserstack_brand">
+              <h1> BrowserStack </h1>
+              <h3>Device Addition Tool</h3>
+            </div>
+            <div id="content_wrapper">
+              <div id="device_details">
+                <form id="set-device-name">
+                  <label for="device-name">Enter Device Name: </label>
+                  <input type="text" id="device-name" value="OnePlus 8"><br><br>
+                  <div style="margin-bottom: 20px;">
+                    <label for='device-type'>Enter Device Type: </label>
+                    <select id="device-type">
+                      <option value="android">Android</option>
+                      <option value="iphone">Iphone</option>
+                    </select>
+                  </div>
+                  <label for="device-popularity">Enter Browserstack Popularity: </label>
+                  <input type="text" id="device-popularity" value="4"><br><br>
+                  <label for="device-market-share">Enter Market Share: </label>
+                  <input type="text" id="device-market-share" value="5"><br><br>
+                  <label for="device-release-date">Enter Release Date: </label>
+                  <input type="text" id="device-release-date" value="2018, November"><br><br>
+                  <label for="device-date-of-introduction">Enter Date of Introduction: </label>
+                  <input type="text" id="device-date-of-introduction" value="2018, November"><br><br>
+                  <label for="device-screen-size">Enter Screen Size(In Inches): </label>
+                  <input type="text" id="device-screen-size" value="6.41 in - 6.20 × 2.94 in"><br><br>
+                  <label for="device-resolution">Enter Resolution: </label>
+                  <input type="text" id="device-resolution" value="1080x2160 px"><br><br>
+                  <label for="device-viewport">Enter Viewport: </label>
+                  <input type="text" id="device-viewport" value="1024 x 768 dp"><br><br>
+                  <label for="device-dp-density">Enter DP Density: </label>
+                  <input type="text" id="device-dp-density" value="6.2"><br><br>
+                  <label for="device-api">Enter API: </label>
+                  <input type="text" id="device-api" value="28"><br><br>
+                  <label for="device-aspect-ratio">Enter Aspect Ratio: </label>
+                  <input type="text" id="device-aspect-ratio" value="18 : 9"><br><br>
+                  <div class="button-wrapper">
+                    <button id="submit" name="submit">Submit</button>
+                  </div>
+                </form>
+              </div>
+              <div id="device_details_info">
+                <table>
+                  <tr>
+                    <th>Key</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>Device Name</td>
+                    <td>Device name should be the key for the hash. No need for the OS Version and the Resolution of the
+                      device.</td>
+                  </tr>
+                  <tr>
+                    <td>Device Type</td>
+                    <td>Android or iOS</td>
+                  </tr>
+                  <tr>
+                    <td>Browserstack Popularity</td>
+                    <td>This is an info param for the device info panel. Info will be provided by the product manager as
+                      part of the Jira ticket.</td>
+                  </tr>
+                  <tr>
+                    <td>Market Share</td>
+                    <td>This is the market share for the device. Info will be provided by the product manager as part of
+                      the Jira ticket.</td>
+                  </tr>
+                  <tr>
+                    <td>Release Date</td>
+                    <td>Release date of the device. You can get the info from GSM Arena.</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Introduction</td>
+                    <td>Date when this being added to Browserstack. Ideally, this should be the day you started the Dev.
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Screen Size</td>
+                    <td>Screen size of the device. You can get this info from GSM Arena.</td>
+                  </tr>
+                  <tr>
+                    <td>Resolution</td>
+                    <td>Resolution of the device. You can get this info from GSM Arena.</td>
+                  </tr>
+                  <tr>
+                    <td>Viewport</td>
+                    <td>Viewport of the device. You can get this info from GSM Arena.</td>
+                  </tr>
+                  <tr>
+                    <td>Aspect Ratio</td>
+                    <td>Aspect ratio of the device. You can get this info from GSM Arena.</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="step-2" class="">
+          <div id="bsdat_main_wrapper">
+            <div class="bsdat_wrapper">
+              <form id="set-device-image-form">
+                <input type="file" id="device-image-input" accept=".png">
+                <button>Set Device</button>
+              </form>
+              <div class="device-dimensions-div hide">
+                <p>Device Dimensions = <span id="device-dimensions"></span></p>
+              </div>
+              <button id="set-charger" class="hide">Set Charger</button>
+              <form id="set-device-skin-css-width" class="hide">
+                <input type="number" id="device-skin-css-width-input">
+                <button>Set Device Skin Width</button>
+              </form>
+              <div class="device-skin-dimensions-div hide">
+                <p>Device Skin Dimensions = <span id="device-skin-dimensions"></span></p>
+              </div>
+              <div style="display: flex;align-items: center;margin-top: 10px;margin-bottom: 10px;"
+                class="scaled-transform-div hide">
+                <p style="margin-bottom: 0;margin-right: 10px;" class="hide">Scaled Transform</p>
+                <input id="device-video-transform-scale-input" type="number" value="1" step="0.01" title="Scale"
+                  class="hide">
+              </div>
+              <div style="margin-bottom: 10px;">
+                <button id="genrate_rails_code" class="hide">Generate Rails Code!</button>
+              </div>
+            </div>
+            <div class="bsdat_wrapper">
+              <div id="device-image-container">
+                <img id="device-image">
+                <svg id="device-grid-lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <pattern id="smallGrid" width="8" height="8" patternUnits="userSpaceOnUse">
+                      <path class="line" d="M 8 0 L 0 0 0 8" fill="none" stroke-width="0.5" />
+                    </pattern>
+                    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                      <rect width="80" height="80" fill="url(#smallGrid)" />
+                      <path class="line" d="M 80 0 L 0 0 0 80" fill="none" stroke-width="1" />
+                    </pattern>
+                  </defs>
+                  <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+                <img id="device-charger" src="">
+                <div id="device-video" tabindex="0">
+                  <div id="device-video-horizontal-center-line"></div>
+                  <div id="device-video-vertical-center-line"></div>
+                </div>
+                <div id="device-image-horizontal-center-line"></div>
+                <div id="device-image-vertical-center-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="step-3">
+          <h1>Please update the following files in the railsApp</h1>
+          <ul>
+            <li>config/initializers/automate_mobile_name.yml</li>
+            <li>config/initializers/mobile_name.yml</li>
+          </ul>
+        </div>
+        <div id="step-4" class="">
+          <div id="device-properties">
+            <form id="device-property-form-data">
+              <div class="railsAppPath">
+                <p style="max-width: 200px;">Enter your railsApp path(absolute): </p>
+                <input type="text" id="railsAppPath">
+              </div>
+              <div class="add-device-select">
+                <button id="enable-device-selector">Select place to add a device</button>
+                <div id="after-device-wrapper" class="hide">
+                  After Device:
+                  <select id="after-device"></select>
+                </div>
+              </div>
+            </form>
+            <div class="railsapp_code_container">
+              <div id="rails_constants_rb_code">
+                <p class="file-ncontent">Constants.rb content: </p>
+                <textarea name="Constants.rb content here..." id="constants_rb" rows=16></textarea>
+              </div>
+              <div id="rails_constants_js_code">
+                <p class="file-ncontent">devices.js content: </p>
+                <textarea name="devices.js content here..." id="devices_js" rows=16></textarea>
+              </div>
+              <div id="rails_real_mobile_scsss_code">
+                <p class="file-ncontent">_real-mobile.scss content: </p>
+                <textarea name="_real-mobile.scss content here..." id="real-mobile_scss" rows=16></textarea>
+              </div>
+            </div>
+            <form id="update-form" action="/update-files" method="post">
+              <input type="submit" value="Write to File!"></input>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="notification" class="hidden">
+    <p id="message"></p>
+    <button id="close-button" onClick="closeNotification()">
+      Close
+    </button>
+    <button id="restart-button" onClick="restartApp()" class="hidden">
+      Restart
+    </button>
+  </div>
+  <p id="version"></p>
+  <script>window.$ = window.jQuery = require('./resources/public/script/jquery.min.js');</script>
+  <script type="text/javascript" src="./resources/public/script/scriptStart.js" />
+  <script type="text/javascript" src="./resources/public/script/jquery.min.js"></script>
+  <script type="text/javascript" src="./resources/public/script/overhang.min.js"></script>
+  <script>
+    const { ipcRenderer } = require('electron');
+    const version = document.getElementById('version');
+    const notification = document.getElementById('notification');
+    const message = document.getElementById('message');
+    const restartButton = document.getElementById('restart-button');
+
+    function closeNotification() {
+      notification.classList.add('hidden');
+    }
+    function restartApp() {
+      ipcRenderer.send('restart_app');
+    }
+
+    ipcRenderer.send('app_version');
+    ipcRenderer.on('app_version', (event, arg) => {
+      ipcRenderer.removeAllListeners('app_version');
+      version.innerText = 'Version ' + arg.version;
+    });
+    ipcRenderer.on('update_available', () => {
+      ipcRenderer.removeAllListeners('update_available');
+      message.innerText = 'A new update is available. Downloading now...';
+      notification.classList.remove('hidden');
+    });
+    ipcRenderer.on('update_downloaded', () => {
+      ipcRenderer.removeAllListeners('update_downloaded');
+      message.innerText = 'Update Downloaded. It will be installed on restart. Restart now?';
+      restartButton.classList.remove('hidden');
+      notification.classList.remove('hidden');
+    });
+  </script>
+  <script type="text/javascript" src="./resources/public/script/popper.min.js"></script>
+  <script type="text/javascript" src="./resources/public/script/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./resources/public/script/jquery.smartWizard.min.js"></script>
+  <script type="text/javascript" src="./resources/public/script/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="./resources/public/script/index.js"></script>
+  <script type="text/javascript" src="./resources/public/script/bsdat_main.js"></script>
+  <script type="text/javascript" src="./resources/public/script/charger-template.js"></script>
+  <script type="text/javascript" src="./resources/public/script/scriptEnd.js" />
+  </body>

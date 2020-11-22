@@ -1,0 +1,349 @@
+body {
+  padding: 0;
+  margin: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  overflow: scroll;
+}
+
+h1 {
+  padding-left: 8px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+form {
+  margin-bottom: 15px;
+}
+
+input:not([type="checkbox"]),
+button {
+  margin: 0;
+  padding: 5px 10px;
+  border: solid 1px #cdcdcd;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+input:not([type="checkbox"]) {
+  padding: 8px;
+}
+
+input:not([type="checkbox"]) {
+  width: 220px;
+}
+
+#main_wrapper {
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#content_wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#device_details {
+  min-width: 50%;
+}
+
+button {
+  display: inline-block;
+  width: 125px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 15px;
+  text-transform: uppercase;
+  background: #efefef;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #dfdfdf;
+}
+#bsdat_main_wrapper  textarea {
+  width: 350px;
+  max-width: 350px;
+  display: block;
+  margin-bottom: 3px;
+  padding: 10px;
+  font-size: 12px;
+  overflow-wrap: break-word;
+  border: solid 1px #cdcdcd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  resize: auto;
+  outline: none;
+  position: relative;
+}
+
+#update-form{
+  margin-top: 50px;
+  width: 40%;
+  margin: 25px auto;
+}
+#update-form input[type=submit]{
+  /* background-color: #68b300; */
+  border: 1px solid #68b300;
+  width:100%;
+  color: #68b300;
+}
+
+#update-form input[type=submit]:hover{
+  background-color: #68b300;
+  cursor: pointer;
+  color: white;
+}
+.checkbox-container {
+  display: inline-block;
+  padding-right: 10px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.max-width-350 {
+  max-width: 350px;
+}
+
+#device-cable-input {
+  width: 165px;
+}
+
+#set-device-cable-form button {
+  width: 180px;
+}
+
+#device-skin-css-width-input {
+  width: 108px;
+  float: left;
+}
+
+#set-device-skin-css-width button {
+  width: 250px;
+  margin: 0 5px;
+}
+
+#set-device-video-border-radius-form input[type="number"] {
+  width: 69px;
+}
+
+#set-device-video-border-radius-form button {
+  width: 203px;
+}
+
+#set-device-video-transform-form button {
+  width: 100%;
+}
+
+#device-image-container {
+  position: absolute;
+  top: 15px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border: 2px solid black;
+  right: 0;
+}
+
+#device-properties {
+  width: 100%;
+  background: white;
+  text-align: left;
+  overflow: hidden;
+  height: 100%;
+}
+#device-properties h1{
+  text-align: center;
+  font-size: 32px;
+}
+
+#rails_constants_rb_code,
+#rails_constants_js_code,
+#rails_real_mobile_scsss_code {
+  width: 33.33%;
+  height: 60%;
+}
+
+#rails_constants_rb_code textarea,
+#rails_constants_js_code textarea,
+#rails_real_mobile_scsss_code textarea {
+  width: 95%;
+}
+
+#device-image {
+  position: relative;
+}
+
+#device-charger{
+  position: absolute;
+  right: 0;
+}
+#bsdat_main_wrapper {
+  display: flex;
+}
+.bsdat_wrapper {
+  width: 50%;
+  position: relative;
+}
+
+#device-grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#device-grid-lines .line {
+  stroke: #555555;
+}
+
+#device-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 0, 0, 0.5);
+  cursor: move;
+  outline: none;
+}
+
+.device-video-resize-helper {
+  background: rgba(0, 255, 255, 0.5);
+}
+
+#device-video-transform-scale-input {
+  width: 100px;
+}
+
+#device-image-horizontal-center-line {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20000px;
+  top: -10000px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: 50% 50%;
+  background: #00ff00;
+}
+
+#device-video-horizontal-center-line {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 20000px;
+  top: -10000px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: 50% 50%;
+  background: #ff0000;
+}
+
+#device-image-vertical-center-line {
+  content: "";
+  position: absolute;
+  width: 20000px;
+  height: 1px;
+  top: 50%;
+  left: -10000px;
+  transform: translate(0, -50%);
+  transform-origin: 50% 50%;
+  background: #00ff00;
+}
+
+#device-video-vertical-center-line {
+  content: "";
+  position: absolute;
+  width: 20000px;
+  height: 1px;
+  top: 50%;
+  left: -10000px;
+  transform: translate(0, -50%);
+  transform-origin: 50% 50%;
+  background: #ff0000;
+}
+
+#compute-css-form button {
+  width: 140px;
+}
+
+#compute-css-form {
+  margin-bottom: 7px;
+}
+
+#device_details_info table{
+  width:100%;
+  padding-top: 15px; font-size: 13px; text-align: center; top: 15px; left: 700px;
+}
+
+#set-device-name{
+  text-align: left;
+}
+#set-device-name label{
+  width: 250px;
+}
+
+#set-device-name strong {
+  min-width: 200px;
+  display: inline-block;
+}
+
+#set-device-name input {
+  min-width: 300px;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 71%
+}
+.add-device-select {
+  display: flex;
+  align-items: center;
+}
+#enable-device-selector {
+  width: 300px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.railsAppPath {
+  margin-bottom: 20px;
+}
+#device-property-form-data {
+  padding: 20px;
+}
+#after-device-wrapper {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.railsapp_code_container {
+  display: flex;
+}
+.file-ncontent {
+  font-size: 16px;
+}
+#set-charger {
+  width: 200px;
+  margin-bottom: 10px;
+}
+#genrate_rails_code {
+  width: 250px;
+}

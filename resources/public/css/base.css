@@ -1,0 +1,50 @@
+.browserstack_brand {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.browserstack_brand h1 {
+  font-size: 32px;
+}
+.browserstack_brand h3 {
+  font-size: 20px;
+}
+.hide {
+  display: none;
+}
+
+#device-properties.hide {
+  display: none;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 54%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.show {
+  display: block;
+}
+#notification {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.hidden {
+  display: none;
+}
